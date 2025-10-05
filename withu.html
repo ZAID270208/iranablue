@@ -189,4 +189,34 @@
     <script src="withu-script.js"></script>
 </body>
 
+    <script>
+document.addEventListener("DOMContentLoaded", () => {
+    const audio = document.getElementById("audio-player");
+    const nameForm = document.getElementById("name-form");
+    const musicBtn = document.getElementById("music-btn");
+
+    // Autoplay music setelah user isi nama (agar tidak diblokir browser)
+    nameForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+        audio.volume = 0.5; // volume bisa kamu atur
+        audio.loop = true;  // biar lagu muter terus
+        audio.play().catch(err => {
+            console.log("Autoplay diblokir, aktifkan manual lewat tombol musik.");
+        });
+    });
+
+    // Tombol manual toggle musik
+    musicBtn.addEventListener("click", () => {
+        if (audio.paused) {
+            audio.play();
+            musicBtn.innerHTML = '<i class="fas fa-pause"></i>';
+        } else {
+            audio.pause();
+            musicBtn.innerHTML = '<i class="fas fa-music"></i>';
+        }
+    });
+});
+</script>
+
 </html>
+
