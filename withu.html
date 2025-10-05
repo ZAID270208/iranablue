@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ocean Quiz - Interactive Survey 🌊</title>
+    <link rel="stylesheet" href="withu-style.css">
+    <link href='https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Nunito:wght@400;600;700&display=swap' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <meta name="theme-color" content="#1e40af">
+</head>
+<body>
+    <!-- Ocean Background -->
+    <div class="ocean-bg">
+        <div class="wave wave1"></div>
+        <div class="wave wave2"></div>
+        <div class="bubble-container" id="bubbles"></div>
+    </div>
+    
+    <!-- Loading Screen -->
+    <div class="overlay" id="loading-screen">
+        <div class="loading-content">
+            <div class="wave-loader">
+                <div class="wave-circle"></div>
+                <div class="wave-circle"></div>
+                <div class="wave-circle"></div>
+            </div>
+            <h2>Loading Survey...</h2>
+            <p>Preparing interactive quiz 🌊</p>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progress"></div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Name Input -->
+    <div class="overlay" id="name-modal" style="display: none;">
+        <div class="modal">
+            <div class="modal-header">
+                <h2>🌊 Welcome to Ocean Quiz</h2>
+                <p>Before we start, Siapa namamu bro??</p>
+            </div>
+            <form id="name-form">
+                <input type="text" id="user-name" placeholder="Enter your name..." required>
+                <button type="submit" class="btn-primary">
+                    <i class="fas fa-arrow-right"></i> Continue
+                </button>
+            </form>
+        </div>
+    </div>
+    
+    <!-- Confirmation Modal -->
+    <div class="overlay" id="confirm-modal" style="display: none;">
+        <div class="modal">
+            <div class="modal-header">
+                <h2>Hi <span id="name-display"></span>! 👋</h2>
+                <p> Selamat Datang di Room chat ZAID ABDUL ROZAQ.</p>
+            </div>
+            <div class="button-group">
+                <button class="btn-primary" id="confirm-yes">
+                    <i class="fas fa-check"></i> Sure, let's go!
+                </button>
+                <button class="btn-secondary" id="confirm-no">
+                    <i class="fas fa-times"></i> Maybe later
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Error Modal -->
+    <div class="overlay" id="error-modal" style="display: none;">
+        <div class="modal error">
+            <div class="error-icon">⚠️</div>
+            <h3>Oops!</h3>
+            <p id="error-message">Something went wrong. Please try again.</p>
+            <button class="btn-primary" id="close-error">Try Again</button>
+        </div>
+    </div>
+    
+    <!-- Main Content -->
+    <div id="main-content" style="display: none;">
+        <!-- Progress Indicator -->
+        <div class="progress-header">
+            <div class="progress-info">
+                <span class="step-counter" id="step-counter">Step 1 of 6</span>
+                <div class="progress-track">
+                    <div class="progress-current" id="progress-track"></div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Character Section -->
+        <div class="character-section">
+            <div class="character-card">
+                <img id="character-img" src="baik.png" alt="Character" class="character-avatar">
+                <div class="character-info">
+                    <h3>Zaid</h3>
+                    <div class="status-indicator" id="status">😊 Active</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Story Section -->
+        <div class="content-section" id="story-section">
+            <div class="story-card">
+                <div class="story-text" id="story-text"></div>
+                <div class="story-actions" id="story-actions" style="display: none;">
+                    <button class="btn-primary" id="story-yes">
+                        <i class="fas fa-thumbs-up"></i> Yes
+                    </button>
+                    <button class="btn-secondary" id="story-no">
+                        <i class="fas fa-thumbs-down"></i> No
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Quiz Section -->
+        <div class="content-section" id="quiz-section" style="display: none;">
+            <div class="quiz-container">
+                <div class="quiz-header">
+                    <h2>Quick Survey for <span id="user-name-quiz"></span></h2>
+                    <div class="quiz-progress">
+                        <span id="question-counter">1/5</span>
+                    </div>
+                </div>
+                
+                <div class="question-card">
+                    <h3 id="question-text">Loading question...</h3>
+                    <div class="options-grid" id="options-container">
+                        <!-- Options will be generated by JS -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Final Input -->
+        <div class="content-section" id="final-section" style="display: none;">
+            <div class="final-card">
+                <h2>🌊 Final Step</h2>
+                <p>Share your honest thoughts about Zaid (minimum 50 words)</p>
+                
+                <div class="textarea-wrapper">
+                    <textarea 
+                        id="final-opinion" 
+                        placeholder="Type your thoughts here..."
+                        rows="6"
+                    ></textarea>
+                    <div class="word-count">
+                        <span id="word-count">0</span> / 50 words
+                    </div>
+                </div>
+                
+                <button class="btn-submit" id="submit-final" disabled>
+                    <i class="fas fa-paper-plane"></i>
+                    Submit Survey
+                </button>
+            </div>
+        </div>
+        
+        <!-- Success Screen -->
+        <div class="content-section" id="success-section" style="display: none;">
+            <div class="success-card">
+                <div class="success-animation">
+                    <div class="checkmark">✓</div>
+                </div>
+                <h2>Thank You!</h2>
+                <p>Your response has been submitted successfully.</p>
+                <button class="btn-primary" onclick="location.reload()">
+                    <i class="fas fa-redo"></i> Take Survey Again
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Audio Player -->
+    <audio id="audio-player" preload="auto" style="display: none;">
+        <source src="1005.MP3" type="audio/mpeg">
+        <source src="indah.mp3" type="audio/mpeg">
+    </audio>
+    
+    <!-- Music Toggle -->
+    <div class="music-toggle" id="music-toggle">
+        <button id="music-btn">
+            <i class="fas fa-music"></i>
+        </button>
+    </div>
+    
+    <script src="withu-script.js"></script>
+</body>
+</html>
