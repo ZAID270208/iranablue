@@ -276,11 +276,10 @@ function updateProgress() {
 function showStory() {
     const storyText = document.getElementById('story-text');
     const storyTexts = [
-        `Hai ${userName}! ehhh kamoh tau ga? 🤔, waktu Indonesia itu WIB, WITA sama WIT kan yahh? 🇮🇩, tapii beuhhh adaa donggg waktuu yang paling akoh seru+suka+asikk+ didunia ini, tauu nda apaah? 😏
-            WITH U! hihihihihi 
-            ohh kamohh hausss? 🥵 eheyy bilangg atuhh mau aqua? 💧 atau mau sama aqua ajah? 😂 awoakwowak hadohhh maaf ya Allahh 🙏
-            ran, hehehe makasih yahh rann persembahan lagu bluenya, 🎶💙 samaa kokk iran is my favoriteeeeee placeeee hehehehe (setelah Allah, umi, abi) 🕋👨‍👩‍👧, tapiii irann beuhhhh kerennn rannnn ✨ walaupunnn yaaa kamoh copas dari chatgpt. 🤖 Tapi yang zaid liat tuhh dariii niat semangat kamohh brooo 💪🔥, hohoho kamohh dah effort effort tanyain codenya di chatgpt, effort effort install software pytonnyahh 🐍💻 nahh ituhh semuaa ga gampangg yenn (bagi orang yang awam) 😮‍💨, nahhh kamohh kerenn yenn 🌟 dengan adanya niat semangat ituhh kamoh coba coba untuk nyobain ituh semuaa kenapa kerenn? karna secara tidak langsungg kamoh sedang mempelajari sesuatu yangg sebelumnya kamoh tidak tauu broo 🧠💡, yappp pokoknyahhh ayah bangga nakk 🤗❤️ kamoh sudah 1 langkah lebih maju dari pada orang yang belum tau tentang cara membuat ituu nakk! 🚀
-            Jadi ada seseorang yang ingin kita bicarakan...`,
+        `Hai ${userName}! ehhh kamoh tau ga? 🤔, Griya cataniaaaa perum cantik cakeppp, hai, selamat malam iranaa yang (ntik)
+            Eh Iyah maap ya Allah🙏,
+        'Yahhh yennn kita beneran cuti dinas selama 1 bulan niee yennn?? hohoho ahmassaaa asekkkk berani nie yennn?',
+        'Yesssssssss🤩🤩🤩🤩, akhirnyah waktu yang Zaid tunggu tunggu, asekkk terwujud jugaa euyyy hohoho 🤪, anuu yenn Zaid hehehe Nda enak euy sama kamoh😅 dari kemaren kemaren gimana yahh jujurr Zaid juga ngerasa "aduh gw kalau ngobrol yapping yapping terus kaya gini tiap hari mah aduhh Iran ke ganggu ga yah?,ohhh iyahh orang mahhh harusnya kita liat sikonn sikon iddd, misal kita disekolah nihh kita  lagi santai nihh nda ada pr, Iran juga lagi mood asik lucu seru🤩 nahh baruuu dehh kita yapping yapping idd beuhh kita bercandain Iran deh nanti🤩" awokawok eh Iyah maap nahh iyahh mungkin Zaid kurang dewasa ajah kali lah yah shap shapp kami akan evaluasi lagi bossskuhh 🤗, maaf yah ran😅',
         `Namanya Zaid. Dia tuh orangnya menarik, kadang serius kadang santai.🤩✨`,
         `kami penasaran sama pendapat kamu tentang dia.🤩✨v`,
         `Tolong kami untuk  mengisi survey singkat tentang dia yah🤩✨`
