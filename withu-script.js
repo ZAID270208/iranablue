@@ -280,9 +280,10 @@ function showStory() {
             Eh Iyah maap ya Allah🙏,
         'Yahhh yennn kita beneran cuti dinas selama 1 bulan niee yennn?? hohoho ahmassaaa asekkkk berani nie yennn?',
         'Yesssssssss🤩🤩🤩🤩, akhirnyah waktu yang Zaid tunggu tunggu, asekkk terwujud jugaa euyyy hohoho 🤪, anuu yenn Zaid hehehe Nda enak euy sama kamoh😅 dari kemaren kemaren gimana yahh jujurr Zaid juga ngerasa "aduh gw kalau ngobrol yapping yapping terus kaya gini tiap hari mah aduhh Iran ke ganggu ga yah?,ohhh iyahh orang mahhh harusnya kita liat sikonn sikon iddd, misal kita disekolah nihh kita  lagi santai nihh nda ada pr, Iran juga lagi mood asik lucu seru🤩 nahh baruuu dehh kita yapping yapping idd beuhh kita bercandain Iran deh nanti🤩" awokawok eh Iyah maap nahh iyahh mungkin Zaid kurang dewasa ajah kali lah yah shap shapp kami akan evaluasi lagi bossskuhh 🤗, maaf yah ran😅',
-        `Namanya Zaid. Dia tuh orangnya menarik, kadang serius kadang santai.🤩✨`,
-        `kami penasaran sama pendapat kamu tentang dia.🤩✨v`,
-        `Tolong kami untuk  mengisi survey singkat tentang dia yah🤩✨`
+        Namanya Zaid. Dia tuh orangnya menarik, kadang serius kadang santai.🤩✨
+        kami penasaran sama pendapat kamu tentang dia.🤩✨v
+        Tolong kami untuk  mengisi survey singkat tentang dia yah🤩✨
+        dan ketidaksengajaan bersama mu lah, hidupku mendapat lebih banyak pelajaran, arti dari kehilangan, dan kasih yang harus tetap dicurahkan untuk orang2 disekitar kita, Terima Kasih ya Ketidasengajaan, kamu sudah mendapat tempat terbaik dalam hatiku, namun harus terpisah kan keyakinan, maaf ya ketidaksengajaan, karena aku masih megharapkan ketidakserngajaanmu itu kembali kedalam hari2 berat ku..
     ];
     let textIndex = 0;
 
@@ -569,3 +570,4 @@ document.addEventListener('keydown', (e) => {
         }
     }
 });
+
